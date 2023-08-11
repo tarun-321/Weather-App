@@ -65,7 +65,7 @@ app.get('/weather',(req,res)=>{
                 forecast,
                 location
             })
-    })
+    }) 
     
 })
 
