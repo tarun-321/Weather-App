@@ -45,15 +45,16 @@ const forecast = (address,callback)=>{
         // console.log(latitude, longitude)
         // console.log(loc)
         // console.log(region)
-        // console.log(body.current)
+        //console.log(body.current)
         callback(undefined,{
            location: body.location.country,
            region  :body.location.region,
-           forecast:'Current observation time is '+body.current.observation_time +"." + 'Weather_descriptions is : ' +body.current.weather_descriptions[0] +'. Current Temperature is ' + body.current.temperature +' degress out.  It feels like ' + body.current.feelslike + ' degress out.'+ 'The humidity is : '+body.current.humidity + "%" + '. wind_speed is : '+body.current.wind_speed + '.wind direction: ' + body.current.wind_dir + ". Currently is_day: " +body.current.is_day,
+           forecast:"Current observation time is "+body.current.observation_time +"." + "Weather_descriptions is : "+body.current.weather_descriptions[0] +'. Current Temperature is ' + body.current.temperature +' degress out.  It feels like ' + body.current.feelslike + ' degress out.'+ 'The humidity is : '+body.current.humidity + "%" + '. wind_speed is : '+body.current.wind_speed + '.wind direction: ' + body.current.wind_dir + ". Currently is_day: " +body.current.is_day,
            longitude:body.location.lon,
            latitude:body.location.lat
         
         })
+        // console.log(forecast);
     }
     
 })

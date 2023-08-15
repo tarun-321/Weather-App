@@ -20,12 +20,12 @@ app.set('views',viewsPath)
 // for hbs config
 hbs.registerPartials(partialsPath)
 // app.set('views', path.join(__dirname , '../templates/views'));
-app.use(express.static(publicDIR))//web page is static donot change when we refresh it!
+app.use(express.static(publicDIR))//web page is static do not change when we refresh it!
 
 
 app.get('',(req,res)=>{
     res.render('index',{
-        title:'weather',
+        title:'Weather',
         name:'Tarun'
     })
 })
@@ -64,7 +64,7 @@ app.get('/weather',(req,res)=>{
         res.send({
                 forecast,
                 location
-            })
+        })
     }) 
     
 })
